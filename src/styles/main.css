@@ -5,6 +5,12 @@
   --color-text-primary: #24292e;
   --color-text-secondary: #586069;
   --color-accent: #0366d6;
+  
+  /* Cores do Primer Brand */
+  --brand-color-canvas-default: var(--color-bg-primary);
+  --brand-color-border-default: var(--color-border);
+  --brand-color-fg-default: var(--color-text-primary);
+  --brand-color-accent-fg: var(--color-accent);
 }
 
 * {
