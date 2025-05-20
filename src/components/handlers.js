@@ -1,10 +1,2 @@
-// Event handlers
-function handleLogin() {
-  const loginModal = new LoginModal();
-  loginModal.open();
-}
-
-function handleSignup() {
-  const signupModal = new SignupModal();
-  signupModal.open();
-}
+// Event handlers 
+// As funções de handler foram movidas para o index.js principal para evitar problemas de escopo

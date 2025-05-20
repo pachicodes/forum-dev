@@ -71,5 +71,4 @@ function renderCategoriesGrid() {
   `;
 }
 
-// Tornar a função disponível globalmente
-window.renderCategoriesGrid = renderCategoriesGrid;
+// Função já está disponível globalmente no escopo

@@ -527,60 +527,30 @@ function handleSignup() {
 function renderApp() {
   const root = document.getElementById('root');
   
-  // Importar componentes - em um projeto real, usaríamos import/export
-  // Importando o conteúdo dos arquivos JS manualmente
-  const renderHeaderScript = document.createElement('script');
-  renderHeaderScript.src = '../src/components/Header.js';
-  renderHeaderScript.type = 'module';
-  document.head.appendChild(renderHeaderScript);
-  
-  const renderHeroScript = document.createElement('script');
-  renderHeroScript.src = '../src/components/Hero.js';
-  renderHeroScript.type = 'module';
-  document.head.appendChild(renderHeroScript);
-  
-  const renderCategoriesGridScript = document.createElement('script');
-  renderCategoriesGridScript.src = '../src/components/CategoriesGrid.js';
-  renderCategoriesGridScript.type = 'module';
-  document.head.appendChild(renderCategoriesGridScript);
-  
-  const renderRecentTopicsScript = document.createElement('script');
-  renderRecentTopicsScript.src = '../src/components/RecentTopics.js';
-  renderRecentTopicsScript.type = 'module';
-  document.head.appendChild(renderRecentTopicsScript);
-  
-  const renderFooterScript = document.createElement('script');
-  renderFooterScript.src = '../src/components/Footer.js';
-  renderFooterScript.type = 'module';
-  document.head.appendChild(renderFooterScript);
-  
-  // Esperar que todos os scripts sejam carregados
-  setTimeout(() => {
-    try {
-      // Renderizar o conteúdo da página
-      root.innerHTML = `
-        ${window.renderHeader ? renderHeader() : '<!-- Header não carregado -->'}
-        <main>
-          ${window.renderHero ? renderHero() : '<!-- Hero não carregado -->'}
-          ${window.renderCategoriesGrid ? renderCategoriesGrid() : '<!-- CategoriesGrid não carregado -->'}
-          ${window.renderRecentTopics ? renderRecentTopics() : '<!-- RecentTopics não carregado -->'}
-        </main>
-        ${window.renderFooter ? renderFooter() : '<!-- Footer não carregado -->'}
-      `;
-      
-      // Adicionar event listeners após a renderização do DOM
-      setupEventListeners();
-    } catch (error) {
-      console.error('Erro ao renderizar a aplicação:', error);
-      root.innerHTML = `
-        <div class="blankslate">
-          <h3>Erro ao carregar a aplicação</h3>
-          <p>Ocorreu um erro ao renderizar a aplicação. Por favor, atualize a página ou contate o suporte.</p>
-          <pre>${error.message}</pre>
-        </div>
-      `;
-    }
-  }, 500);
+  try {
+    // Renderizar o conteúdo da página
+    root.innerHTML = `
+      ${renderHeader()}
+      <main>
+        ${renderHero()}
+        ${renderCategoriesGrid()}
+        ${renderRecentTopics()}
+      </main>
+      ${renderFooter()}
+    `;
+    
+    // Adicionar event listeners após a renderização do DOM
+    setupEventListeners();
+  } catch (error) {
+    console.error('Erro ao renderizar a aplicação:', error);
+    root.innerHTML = `
+      <div class="blankslate">
+        <h3>Erro ao carregar a aplicação</h3>
+        <p>Ocorreu um erro ao renderizar a aplicação. Por favor, atualize a página ou contate o suporte.</p>
+        <pre>${error.message}</pre>
+      </div>
+    `;
+  }
 }
 
 // Configurar event listeners

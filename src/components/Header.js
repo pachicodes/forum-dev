@@ -44,6 +44,3 @@ function renderHeader() {
     </header>
   `;
 }
-
-// Tornar a função disponível globalmente
-window.renderHeader = renderHeader;

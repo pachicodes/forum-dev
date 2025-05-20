@@ -85,5 +85,4 @@ function renderRecentTopics() {
   `;
 }
 
-// Tornar a função disponível globalmente
-window.renderRecentTopics = renderRecentTopics;
+// Função já está disponível globalmente no escopo

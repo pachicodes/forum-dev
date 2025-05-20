@@ -26,6 +26,3 @@ function renderHero() {
     </div>
   `;
 }
-
-// Tornar a função disponível globalmente
-window.renderHero = renderHero;
