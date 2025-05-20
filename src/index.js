@@ -6,6 +6,11 @@
 // Em um projeto real, usaríamos import/export, mas para simplificar, incluiremos as classes diretamente
 // import './styles/main.css';
 // import { LoginModal, SignupModal } from './components/AuthModals.js';
+// import { renderHeader } from './components/Header.js';
+// import { renderHero } from './components/Hero.js';
+// import { renderCategoriesGrid } from './components/CategoriesGrid.js';
+// import { renderRecentTopics } from './components/RecentTopics.js';
+// import { renderFooter } from './components/Footer.js';
 
 // Classes dos modais de login/cadastro
 // Login Form Component
