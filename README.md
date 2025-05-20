@@ -6,14 +6,16 @@ Um espaço virtual para desenvolvedores trocarem ideias, dúvidas e compartilhar
 
 ## Sobre o Projeto
 
-O Forum Dev é uma plataforma onde desenvolvedores podem:
+O Forum Dev é uma plataforma onde desenvolvedores podem trocar ideias de forma descontraída, sem um foco estritamente técnico. É importante notar que o objetivo principal é criar um espaço acolhedor para devs interagirem, compartilharem experiências e construírem relacionamentos.
 
-- Criar issues para discussões técnicas
-- Colaborar em projetos open source
-- Compartilhar conhecimento através de pull requests
-- Revisar código de outros colaboradores
-- Contribuir com documentação
-- Participar de discussões técnicas
+Na nossa comunidade, os desenvolvedores podem:
+
+- Criar tópicos e participar de discussões diversas
+- Compartilhar experiências do dia a dia como dev
+- Trocar dicas e referências sobre carreira e mercado
+- Fazer networking com outros profissionais
+- Discutir tendências e novidades do mundo da tecnologia
+- Participar de conversas leves sobre temas adjacentes à programação
 
 ## Stack Tecnológica
 
