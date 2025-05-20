@@ -78,5 +78,4 @@ function renderFooter() {
   `;
 }
 
-// Tornar a função disponível globalmente
-window.renderFooter = renderFooter;
+// Função já está disponível globalmente no escopo
