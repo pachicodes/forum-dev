@@ -5,12 +5,31 @@
   --color-text-primary: #24292e;
   --color-text-secondary: #586069;
   --color-accent: #0366d6;
+  --color-accent-hover: #044289;
+  --color-success: #2ea44f;
+  --color-danger: #cb2431;
+  --color-warning: #f9c513;
+  --color-info: #1b1f23;
   
   /* Cores do Primer Brand */
   --brand-color-canvas-default: var(--color-bg-primary);
   --brand-color-border-default: var(--color-border);
   --brand-color-fg-default: var(--color-text-primary);
   --brand-color-accent-fg: var(--color-accent);
+  
+  /* Tamanhos */
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  
+  /* Raios de borda */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
 }
 
 * {
