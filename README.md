@@ -20,6 +20,7 @@ Na nossa comunidade, os desenvolvedores podem:
 ## Stack Tecnológica
 
 ### Frontend
+
 - **JavaScript** - Linguagem principal
 - **React** - Biblioteca para construção da interface
 - **Primer Brand UI** - Design system baseado no GitHub
@@ -27,6 +28,7 @@ Na nossa comunidade, os desenvolvedores podem:
 - **Redux** - Para gerenciamento de estado global
 
 ### Backend
+
 - **Node.js** - Ambiente de execução JavaScript
 - **Express** - Framework web
 - **MongoDB** - Banco de dados NoSQL
@@ -34,10 +36,12 @@ Na nossa comunidade, os desenvolvedores podem:
 - **Redis** - Cache e gerenciamento de sessões
 
 ### Autenticação
+
 - **JWT** (JSON Web Tokens)
 - **Passport.js** - Middleware de autenticação
 
 ### Infraestrutura
+
 - **Docker** - Containerização
 - **GitHub Actions** - CI/CD
 - **Vercel** - Hospedagem do frontend
@@ -56,12 +60,14 @@ Na nossa comunidade, os desenvolvedores podem:
 ### Configuração do Ambiente de Desenvolvimento
 
 1. Clone o repositório:
+
    ```bash
    git clone https://github.com/seu-usuario/forum-dev.git
    cd forum-dev
    ```
 
 2. Instale as dependências:
+
    ```bash
    npm install
    ```
@@ -71,6 +77,7 @@ Na nossa comunidade, os desenvolvedores podem:
    - Configure as variáveis necessárias (MongoDB URI, JWT secret, etc.)
 
 4. Inicie o servidor de desenvolvimento:
+
    ```bash
    npm run dev
    ```
