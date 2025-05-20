@@ -85,5 +85,5 @@ function renderRecentTopics() {
   `;
 }
 
-// Export o componente
-export { renderRecentTopics };
+// Tornar a função disponível globalmente
+window.renderRecentTopics = renderRecentTopics;

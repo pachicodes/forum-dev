@@ -71,5 +71,5 @@ function renderCategoriesGrid() {
   `;
 }
 
-// Export o componente
-export { renderCategoriesGrid };
+// Tornar a função disponível globalmente
+window.renderCategoriesGrid = renderCategoriesGrid;

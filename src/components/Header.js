@@ -45,5 +45,5 @@ function renderHeader() {
   `;
 }
 
-// Export o componente
-export { renderHeader };
+// Tornar a função disponível globalmente
+window.renderHeader = renderHeader;

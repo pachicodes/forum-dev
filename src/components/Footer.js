@@ -78,5 +78,5 @@ function renderFooter() {
   `;
 }
 
-// Export o componente
-export { renderFooter };
+// Tornar a função disponível globalmente
+window.renderFooter = renderFooter;

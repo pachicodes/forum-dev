@@ -27,5 +27,5 @@ function renderHero() {
   `;
 }
 
-// Export o componente
-export { renderHero };
+// Tornar a função disponível globalmente
+window.renderHero = renderHero;
