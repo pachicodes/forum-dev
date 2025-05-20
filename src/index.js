@@ -11,6 +11,11 @@
 // import { renderCategoriesGrid } from './components/CategoriesGrid.js';
 // import { renderRecentTopics } from './components/RecentTopics.js';
 // import { renderFooter } from './components/Footer.js';
+// import { renderHeader } from './components/Header.js';
+// import { renderHero } from './components/Hero.js';
+// import { renderCategoriesGrid } from './components/CategoriesGrid.js';
+// import { renderRecentTopics } from './components/RecentTopics.js';
+// import { renderFooter } from './components/Footer.js';
 
 // Classes dos modais de login/cadastro
 // Login Form Component
@@ -529,3 +534,124 @@ function handleSignup() {
   const signupModal = new SignupModal();
   signupModal.open();
 }
+
+// Renderiza a página inicial completa
+function renderApp() {
+  const root = document.getElementById('root');
+  
+  // Importar componentes - em um projeto real, usaríamos import/export
+  // Importando o conteúdo dos arquivos JS manualmente
+  const renderHeaderScript = document.createElement('script');
+  renderHeaderScript.src = '../src/components/Header.js';
+  renderHeaderScript.type = 'module';
+  document.head.appendChild(renderHeaderScript);
+  
+  const renderHeroScript = document.createElement('script');
+  renderHeroScript.src = '../src/components/Hero.js';
+  renderHeroScript.type = 'module';
+  document.head.appendChild(renderHeroScript);
+  
+  const renderCategoriesGridScript = document.createElement('script');
+  renderCategoriesGridScript.src = '../src/components/CategoriesGrid.js';
+  renderCategoriesGridScript.type = 'module';
+  document.head.appendChild(renderCategoriesGridScript);
+  
+  const renderRecentTopicsScript = document.createElement('script');
+  renderRecentTopicsScript.src = '../src/components/RecentTopics.js';
+  renderRecentTopicsScript.type = 'module';
+  document.head.appendChild(renderRecentTopicsScript);
+  
+  const renderFooterScript = document.createElement('script');
+  renderFooterScript.src = '../src/components/Footer.js';
+  renderFooterScript.type = 'module';
+  document.head.appendChild(renderFooterScript);
+  
+  // Esperar que todos os scripts sejam carregados
+  setTimeout(() => {
+    try {
+      // Renderizar o conteúdo da página
+      root.innerHTML = `
+        ${window.renderHeader ? renderHeader() : '<!-- Header não carregado -->'}
+        <main>
+          ${window.renderHero ? renderHero() : '<!-- Hero não carregado -->'}
+          ${window.renderCategoriesGrid ? renderCategoriesGrid() : '<!-- CategoriesGrid não carregado -->'}
+          ${window.renderRecentTopics ? renderRecentTopics() : '<!-- RecentTopics não carregado -->'}
+        </main>
+        ${window.renderFooter ? renderFooter() : '<!-- Footer não carregado -->'}
+      `;
+      
+      // Adicionar event listeners após a renderização do DOM
+      setupEventListeners();
+    } catch (error) {
+      console.error('Erro ao renderizar a aplicação:', error);
+      root.innerHTML = `
+        <div class="blankslate">
+          <h3>Erro ao carregar a aplicação</h3>
+          <p>Ocorreu um erro ao renderizar a aplicação. Por favor, atualize a página ou contate o suporte.</p>
+          <pre>${error.message}</pre>
+        </div>
+      `;
+    }
+  }, 500);
+}
+
+// Configurar event listeners
+function setupEventListeners() {
+  // Botões de login
+  const loginButton = document.getElementById('login-button');
+  const sidebarLoginButton = document.getElementById('sidebar-login-button');
+  
+  if (loginButton) {
+    loginButton.addEventListener('click', handleLogin);
+  }
+  
+  if (sidebarLoginButton) {
+    sidebarLoginButton.addEventListener('click', handleLogin);
+  }
+  
+  // Botões de cadastro
+  const signupButton = document.getElementById('signup-button');
+  const sidebarSignupButton = document.getElementById('sidebar-signup-button');
+  const heroSignupButton = document.getElementById('hero-signup-button');
+  
+  if (signupButton) {
+    signupButton.addEventListener('click', handleSignup);
+  }
+  
+  if (sidebarSignupButton) {
+    sidebarSignupButton.addEventListener('click', handleSignup);
+  }
+  
+  if (heroSignupButton) {
+    heroSignupButton.addEventListener('click', handleSignup);
+  }
+  
+  // Botão de explorar discussões
+  const exploreButton = document.getElementById('hero-explore-button');
+  if (exploreButton) {
+    exploreButton.addEventListener('click', () => {
+      // Em uma SPA real, navegaríamos para a página de discussões
+      // Por enquanto, vamos apenas rolar para a seção de discussões recentes
+      const recentTopicsSection = document.querySelector('.container-lg h2.f2-mktg');
+      if (recentTopicsSection) {
+        recentTopicsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+  
+  // Mobile menu button
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  if (mobileMenuButton) {
+    mobileMenuButton.addEventListener('click', () => {
+      // Toggle mobile menu
+      alert('Funcionalidade de menu mobile será implementada em breve!');
+    });
+  }
+  
+  console.log('Event listeners configurados com sucesso!');
+}
+
+// Inicializar a aplicação quando o DOM estiver pronto
+document.addEventListener('DOMContentLoaded', () => {
+  renderApp();
+});
