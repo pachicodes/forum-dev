@@ -1,16 +1,4 @@
-// Aqui importaríamos o React e outros componentes se estivéssemos usando um bundler como webpack ou vite
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import App from './App';
-
-// Em um projeto real, usaríamos import/export, mas para simplificar, incluiremos as classes diretamente
-// import './styles/main.css';
-// import { LoginModal, SignupModal } from './components/AuthModals.js';
-// import { renderHeader } from './components/Header.js';
-// import { renderHero } from './components/Hero.js';
-// import { renderCategoriesGrid } from './components/CategoriesGrid.js';
-// import { renderRecentTopics } from './components/RecentTopics.js';
-// import { renderFooter } from './components/Footer.js';
+// Arquivo principal do Forum Dev
 // import { renderHeader } from './components/Header.js';
 // import { renderHero } from './components/Hero.js';
 // import { renderCategoriesGrid } from './components/CategoriesGrid.js';
