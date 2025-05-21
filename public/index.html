@@ -21,8 +21,20 @@
     <script src="../src/components/RecentTopics.js" type="text/javascript"></script>
     <script src="../src/components/Footer.js" type="text/javascript"></script>
     <script src="../src/components/handlers.js" type="text/javascript"></script>
-    
-    <!-- Importando o arquivo principal -->
+      <!-- Importando o arquivo principal -->
     <script src="../src/index.js" type="text/javascript"></script>
+    
+    <!-- Garantindo que a aplicação seja inicializada -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Verificamos se a função renderApp existe no escopo global
+            if (typeof renderApp === 'function') {
+                console.log('Iniciando renderização da aplicação...');
+                renderApp();
+            } else {
+                console.error('Função renderApp não encontrada!');
+            }
+        });
+    </script>
 </body>
 </html>
