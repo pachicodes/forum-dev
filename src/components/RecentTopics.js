@@ -68,9 +68,8 @@ function renderRecentTopics() {
       </div>
     </div>
   `).join('');
-
   return `
-    <div class="container-lg px-3 my-5">
+    <div>
       <div class="d-flex flex-items-baseline flex-justify-between mb-4">
         <h2 class="f2-mktg">Discussões Recentes</h2>
         <a href="/discussoes" class="Link--primary f4">Ver todas as discussões</a>
