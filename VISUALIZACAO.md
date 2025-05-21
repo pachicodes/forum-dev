@@ -16,11 +16,11 @@ Para visualizar o MVP da home page do Forum Dev, siga uma das opções abaixo:
 
 ## Opção 3: Usando o servidor Node.js (quando as dependências forem instaladas)
 
-1. Instale o Node.js caso ainda não tenha: https://nodejs.org/
+1. Instale o Node.js caso ainda não tenha: <https://nodejs.org/>
 2. Abra uma janela de terminal na pasta do projeto
 3. Execute `npm install` para instalar as dependências
 4. Execute `npm start` para iniciar o servidor
-5. Acesse http://localhost:3000 no seu navegador
+5. Acesse <http://localhost:3000> no seu navegador
 
 # Nota Importante
 
