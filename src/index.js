@@ -528,13 +528,35 @@ function renderApp() {
   const root = document.getElementById('root');
   
   try {
-    // Renderizar o conteúdo da página
+    // Renderizar o conteúdo da página com layout de duas colunas
     root.innerHTML = `
       ${renderHeader()}
       <main>
         ${renderHero()}
-        ${renderCategoriesGrid()}
-        ${renderRecentTopics()}
+        <div class="container-lg px-3 my-5">
+          <div class="d-flex flex-column flex-md-row">
+            <!-- Coluna principal (2/3) -->
+            <div class="col-12 col-md-8 pr-md-6">
+              ${renderRecentTopics()}
+            </div>
+            <!-- Coluna direita (1/3) -->
+            <div class="col-12 col-md-4 mt-5 mt-md-0">
+              ${renderCategoriesGrid()}
+              <div class="Box">
+                <div class="Box-header">
+                  <h3 class="Box-title">Junte-se à Comunidade</h3>
+                </div>
+                <div class="Box-body">
+                  <p class="mb-2">Cadastre-se para participar das discussões e receber novidades.</p>
+                  <button class="btn btn-primary btn-block" id="sidebar-signup-button">Criar uma conta</button>
+                  <div class="text-center mt-2">
+                    <p class="text-small color-fg-muted">Já tem conta? <a href="#" id="sidebar-login-button">Faça login</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       ${renderFooter()}
     `;
