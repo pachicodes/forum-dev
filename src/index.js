@@ -239,16 +239,6 @@ class SignupModal {
 
 // Este código foi substituído por uma implementação mais abaixo
 // Event handlers declarados aqui serão usados no setupEventListeners()
-        event.preventDefault();
-        handleLogin();
-      });
-    }
-    
-    if (sidebarSignupButton) {
-      sidebarSignupButton.addEventListener('click', handleSignup);
-    }
-  }, 100);
-}
 
 function renderHeader() {
   return `

@@ -22,6 +22,6 @@ Para visualizar o MVP da home page do Forum Dev, siga uma das opções abaixo:
 4. Execute `npm start` para iniciar o servidor
 5. Acesse <http://localhost:3000> no seu navegador
 
-# Nota Importante
+## Nota Importante
 
 Este é um MVP (Produto Mínimo Viável) da interface do usuário. As funcionalidades de backend como login, cadastro e manipulação de dados serão implementadas em fases futuras.
